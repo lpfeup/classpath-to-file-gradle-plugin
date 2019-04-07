@@ -16,7 +16,7 @@ class ClasspathToFilePlugin: Plugin<Project> {
 
     val ext = project.extensions.create("classpathToFile", ClasspathToFilePluginExtension::class.java, project)
     project.gradle.addListener(JavaExecSpecActionListener(ext))
-    project.gradle.addListener(TestActionListener(ext))
+    // project.gradle.addListener(TestActionListener(ext))
   }
 
   private fun jvmRequirementError() {
