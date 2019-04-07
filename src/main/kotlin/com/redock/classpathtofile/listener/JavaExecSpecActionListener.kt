@@ -15,6 +15,8 @@ class JavaExecSpecActionListener(private val extension: ClasspathToFilePluginExt
     }
 
     classpathToFile(task, task.jvmArgumentProviders, task.classpath)
+    val main = task.main
     task.classpath = EmptyFileCollection
+    task.main = main
   }
 }
